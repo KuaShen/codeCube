@@ -1,0 +1,86 @@
+//
+//  CodeCube-Prefix.pch
+//  CodeCube-Business
+//
+//  Created by apple on 2018/4/30.
+//  Copyright © 2018年 lab. All rights reserved.
+//
+
+#ifndef CodeCube_Prefix_pch
+#define CodeCube_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#define StringFormat(str,value) [NSString stringWithFormat:str,value]
+
+
+#define UD [NSUserDefaults standardUserDefaults]
+
+/**
+ *  系统默认导航栏(44)加状态栏(20)高度
+ */
+#define NAV_HEIGHT   64
+
+/**
+ *  系统默认底部标签栏高度
+ */
+#define TAB_HEIGHT   49
+
+/**
+ *  RGB值方式
+ */
+#define RGBA(r,g,b,a)     [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:a]
+#define RGB(r,g,b)          RGBA(r,g,b,1)
+
+/**
+ *  屏幕大小
+ */
+#define ScreenW    [[UIScreen mainScreen] bounds].size.width
+#define ScreenH    [[UIScreen mainScreen] bounds].size.height
+
+/**
+ *  字号设置
+ */
+#define FONT(RatioFont)     [UIFont systemFontOfSize:RatioFont]
+
+#define COLOR_CIRCLE_NAME         RGB(46,61,112)
+
+/**
+ *  加载本地图片
+ */
+#define LOAD_LOCAL_IMG(imgName)   [UIImage imageNamed:imgName]
+
+/**
+ *  背景颜色
+ */
+#define backColor [UIColor colorWithRed:232/255.0 green:233/255.0 blue:232/255.0 alpha:1.0]
+/**
+ *  字体颜色
+ */
+
+#define Text_Color [UIColor colorWithRed:122/255.0 green:137/255.0 blue:134/255.0 alpha:1.0]
+
+#define COLOR_MAIN          RGB(102,203,255) //主色
+#define COLOR_DISABLE_BG    RGB(222,222,222)
+#define COLOR_BACKGROUND    RGBA(238, 238, 238, 1)   //底层View背景颜色 灰色
+#define COLOR_TITLE         RGB(64, 64, 64)  //CELL title颜色
+#define COLOR_TAB           RGB(102, 153, 204)
+
+
+/**
+ *  系统默认底部标签栏高度
+ */
+
+#define View_X_WIDTH(view) view.frame.origin.x+view.frame.size.width+10
+#define View_Y_HEIGHT(view) view.frame.origin.y+view.frame.size.height+10
+#define X_EQUAL(view) view.frame.origin.x
+#define Y_EQUAL(view) view.frame.origin.y
+#define WIDTH_EQUAL(view) view.frame.size.width
+#define HEIGHT_EQUAL(view) view.frame.size.height
+
+#import "BaseViewController.h"
+#import "TabbarController.h"
+
+#endif /* CodeCube_Prefix_pch */
